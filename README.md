@@ -1,4 +1,9 @@
 # Perception Layer Debug
+## 前面准备
+### mavros源码下载编译并链接
+
+
+
 
 ## Intel D435i 调试
 ### 步骤
@@ -19,3 +24,18 @@ ros2 launch realsense2_camera rs_launch.py
 1. Intel D435i 需要USB3.0的数据线，若不是，无法收到图像。
 
 2. Intel NUC 不能将飞控和激光雷达接在同一侧的USB，否则会占用传输内存。
+
+## onborad-detector 调试
+### 步骤
+1. [onboard-detector](https://github.com/Zhefan-Xu/onboard_detector)下载源码并编译。
+2. 配置修改
+ - 相机内参
+ - 图像分辨率
+3. 先source再启动。
+```
+source /to/your/path/dectector_ws/install/setup.bash
+ros2 launch onboard_detector dynamic_detector.launch.py
+ros2 launch onboard_detector rviz.launch.py
+```
+### 相关问题
+1. 需修改QoS配置
