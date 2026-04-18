@@ -3,7 +3,10 @@
 ### mavros源码下载编译并链接
 
 
-
+### 下载终端模拟器方便调试
+```
+sudo apt install terminator
+```
 
 ## Intel D435i 调试
 ### 步骤
